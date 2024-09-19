@@ -102,7 +102,8 @@ setup(
     py_modules = ['plugin.pycbc_plugin'],
     entry_points = {"pycbc.waveform.td":["SEOBNRv5HM = plugin.pycbc_plugin:gen_seobnrv5hm_td",
                                          "SEOBNRv5PHM = plugin.pycbc_plugin:gen_seobnrv5phm_td"],
-                    "pycbc.waveform.fd":["SEOBNRv5HM = plugin.pycbc_plugin:gen_seobnrv5hm_fd",
-                                         "SEOBNRv5PHM = plugin.pycbc_plugin:gen_seobnrv5phm_fd"]
+                    "pycbc.waveform.length":"SEOBNRv5HM=plugin.pycbc_plugin:SEOBNRv5HM_length_in_time"
+                    # "pycbc.waveform.fd":["SEOBNRv5HM = plugin.pycbc_plugin:gen_seobnrv5hm_fd",
+                    #                      "SEOBNRv5PHM = plugin.pycbc_plugin:gen_seobnrv5phm_fd"]
                     },
 )
