@@ -1,0 +1,109 @@
+# -- build --------
+
+[build-system]
+    build-backend = "setuptools.build_meta"
+    requires = [
+        "setuptools",
+        "setuptools_scm[toml]>=3.4.3",
+        "wheel",
+        "cython",
+        "numpy",
+        "scipy",
+    ]
+
+# -- metadata -----
+
+[project]
+    authors = [
+        {name = "Serguei Ossokine", email = "serguei.ossokine@tutanota.com"},
+        {name = "Lorenzo Pompili", email = "lorenzo.pompili@ligo.org"},
+        {name = "Deyan Mihaylov", email = "deyan.mihaylov@ligo.org"},
+        {name = "Antoni Ramos Buades", email = "antoni.ramos-buades@ligo.org"},
+        {name = "Michael Puerrer", email = "michael.puerrer@ligo.org"},
+        {name = "Hector Estelles", email = "hector.estelles@ligo.org"},
+    ]
+
+    description = "Gravitational wave modelling within the effective-one-body framework"
+    license = {text = "GPL-3.0-or-later"}
+    name = "pyseobnr"
+    readme = "README.rst"
+
+    # requirements:
+    dependencies = [
+        "numpy>=1.23.0",
+        "scipy>=1.8.0",
+        "matplotlib",
+        "h5py",
+        "numexpr",
+        "numba",
+        "qnm",
+        "scri",
+        "setuptools",
+        "rich",
+        "pygsl_lite",
+        "lalsuite",
+    ]
+
+    requires-python = ">=3.8"
+
+    # dynamic properties set by tools:
+    dynamic = ["version"]
+
+[tool.setuptools_scm]
+write_to = "pyseobnr/_version.py"
+
+[project.optional-dependencies]
+    checks = [
+        'bilby',
+        'gwsurrogate',
+        'pathos',
+        'scikit-optimize',
+    ]
+
+    docs = [
+        'nbsphinx',
+        'numpydoc',
+        'sphinx',
+        'sphinx_rtd_theme',
+        'sphinx-tabs',
+        'cython',
+        "sphinx_gallery",
+        "jupytext",
+        "jupyterlab",
+        "pandas",
+        'pyarrow',
+        'seaborn'
+    ]
+
+    tests = [
+        'pytest',
+        'pytest-sugar',
+        'pandas',
+        'pyarrow'
+    ]
+
+[tool.pytest.ini_options]
+    minversion = "6.0"
+    testpaths = [
+        "test",
+    ]
+
+[tool.isort]
+# .pre-commit-config.yaml will read from there
+profile = "black"
+src_paths = ["pyseobnr", "test"]
+sections = "FUTURE,STDLIB,FIRSTPARTY,THIRDPARTY,TESTS,TOOLKIT,LOCALFOLDER"
+extra_standard_library = "tomllib"
+known_tests = "pytest"
+known_toolkit = "pyseobnr"
+
+[tool.flake8]
+# remember to sync with .pre-commit-config.yaml
+ignore = ['E203', 'W503']
+skip_glob = ["*.jinja", "*.wl"]
+max-line-length = 110 # black will take care of most of this
+count = true
+
+[tool.cython-lint]
+max-line-length = 110
+ignore = ['E503', 'E504', 'E741']
