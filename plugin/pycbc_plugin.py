@@ -1,4 +1,4 @@
-mport numpy as np
+import numpy as np
 from pycbc.types import TimeSeries, FrequencySeries
 from pyseobnr.generate_waveform import GenerateWaveform
 from pycbc.waveform import get_waveform_filter_length_in_time, get_waveform_end_frequency
