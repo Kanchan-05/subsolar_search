@@ -1,6 +1,8 @@
-[pycbc.waveform.fd]
-SEOBNRv5HM = plugin.pycbc_plugin:gen_seobnrv5hm_fd
-SEOBNRv5PHM = plugin.pycbc_plugin:gen_seobnrv5phm_fd
+[pycbc.waveform.end_freq]
+SEOBNRv5HM = plugin.pycbc_plugin:SEOBNRv5HM_get_end_frequency
+
+[pycbc.waveform.length]
+SEOBNRv5HM = plugin.pycbc_plugin:SEOBNRv5HM_length_in_time
 
 [pycbc.waveform.td]
 SEOBNRv5HM = plugin.pycbc_plugin:gen_seobnrv5hm_td

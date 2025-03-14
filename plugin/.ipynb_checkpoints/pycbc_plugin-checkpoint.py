@@ -53,7 +53,7 @@ def SEOBNRv5HM_length_in_time(**kwargs):
     # The relevant lower order approximant here is SEOBNRv4
     # NOTE: We can also use IMRPhenomD instead of SEOBNRv4 with e('IMRPhenomD', 2, **kwargs)
     from pycbc.waveform import waveform
-    return waveform.get_hm_length_in_time('IMRPhenomD', 2, **kwargs)
+    return waveform.get_hm_length_in_time('SEOBNRv4', 2, **kwargs)
 
 
 def SEOBNRv5HM_get_end_frequency(**p): 

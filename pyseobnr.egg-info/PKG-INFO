@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: pyseobnr
-Version: 0.2.8.dev48+g17207a9.d20240919
+Version: 0.2.8.dev48+g17207a9.d20250311
 Summary: Gravitational wave modelling within the effective-one-body framework
 Author-email: Serguei Ossokine <serguei.ossokine@tutanota.com>, Lorenzo Pompili <lorenzo.pompili@ligo.org>, Deyan Mihaylov <deyan.mihaylov@ligo.org>, Antoni Ramos Buades <antoni.ramos-buades@ligo.org>, Michael Puerrer <michael.puerrer@ligo.org>, Hector Estelles <hector.estelles@ligo.org>
 License: GPL-3.0-or-later
