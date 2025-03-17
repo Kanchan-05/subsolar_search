@@ -1,1 +1,1 @@
-# subsolar_search
+# High-mass ratio subsolar search
